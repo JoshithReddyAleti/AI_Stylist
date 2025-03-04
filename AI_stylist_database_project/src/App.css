@@ -1,0 +1,573 @@
+/* Base styles */
+:root {
+  --primary-color: #4a6fa5;
+  --secondary-color: #166088;
+  --accent-color: #4fc3f7;
+  --background-color: #f5f7fa;
+  --text-color: #333;
+  --light-text: #666;
+  --border-color: #ddd;
+  --success-color: #4caf50;
+  --error-color: #f44336;
+  --card-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  
+  /* Weather condition colors */
+  --cold-color: #a8d8ff;
+  --cool-color: #b5e2ff;
+  --mild-color: #c9f7c9;
+  --warm-color: #ffe0b5;
+  --hot-color: #ffcccb;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: var(--background-color);
+  color: var(--text-color);
+  line-height: 1.6;
+}
+
+.app-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Header styles */
+.app-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 0;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+  color: var(--primary-color);
+  cursor: pointer;
+}
+
+.nav-menu ul {
+  display: flex;
+  list-style: none;
+}
+
+.nav-menu li {
+  margin-left: 20px;
+  cursor: pointer;
+  padding: 8px 12px;
+  border-radius: 4px;
+  transition: background-color 0.3s;
+}
+
+.nav-menu li:hover {
+  background-color: rgba(74, 111, 165, 0.1);
+}
+
+.nav-menu li.active {
+  color: var(--primary-color);
+  font-weight: bold;
+}
+
+.menu-icon {
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 30px;
+  height: 21px;
+  cursor: pointer;
+}
+
+.menu-icon span {
+  height: 3px;
+  width: 100%;
+  background-color: var(--primary-color);
+  border-radius: 3px;
+  transition: all 0.3s ease;
+}
+
+/* Main content styles */
+.main-content {
+  padding: 30px 0;
+}
+
+.error-message {
+  background-color: rgba(244, 67, 54, 0.1);
+  color: var(--error-color);
+  padding: 10px 15px;
+  border-radius: 4px;
+  margin-bottom: 20px;
+}
+
+.success-message {
+  background-color: rgba(76, 175, 80, 0.1);
+  color: var(--success-color);
+  padding: 10px 15px;
+  border-radius: 4px;
+  margin-bottom: 20px;
+}
+
+.loading {
+  text-align: center;
+  padding: 20px;
+  color: var(--light-text);
+}
+
+/* Home page styles */
+.home-container {
+  text-align: center;
+  padding: 40px 0;
+}
+
+.home-container h1 {
+  font-size: 36px;
+  margin-bottom: 15px;
+  color: var(--primary-color);
+}
+
+.home-container p {
+  font-size: 18px;
+  margin-bottom: 30px;
+  color: var(--light-text);
+}
+
+/* Weather search styles */
+.weather-search form {
+  display: flex;
+  flex-direction: column;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.weather-search input {
+  padding: 12px 15px;
+  border: 1px solid var(--border-color);
+  border-radius: 4px;
+  font-size: 16px;
+  margin-bottom: 15px;
+}
+
+.weather-search button {
+  padding: 12px 20px;
+  background-color: var(--primary-color);
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.weather-search button:hover {
+  background-color: var(--secondary-color);
+}
+
+.weather-search button:disabled {
+  background-color: var(--border-color);
+  cursor: not-allowed;
+}
+
+/* Weather display styles */
+.weather-display {
+  background-color: white;
+  border-radius: 8px;
+  padding: 20px;
+  margin-bottom: 30px;
+  box-shadow: var(--card-shadow);
+}
+
+.weather-display h2 {
+  margin-bottom: 15px;
+  color: var(--primary-color);
+}
+
+.weather-info {
+  display: flex;
+  align-items: center;
+}
+
+.weather-icon img {
+  width: 100px;
+  height: 100px;
+}
+
+.weather-details {
+  margin-left: 20px;
+}
+
+.temperature {
+  font-size: 36px;
+  font-weight: bold;
+}
+
+.description {
+  font-size: 18px;
+  text-transform: capitalize;
+  margin-bottom: 10px;
+}
+
+.extra-info {
+  display: flex;
+  gap: 15px;
+  color: var(--light-text);
+}
+
+/* Weather condition styles */
+.weather-cold {
+  background-color: var(--cold-color);
+}
+
+.weather-cool {
+  background-color: var(--cool-color);
+}
+
+.weather-mild {
+  background-color: var(--mild-color);
+}
+
+.weather-warm {
+  background-color: var(--warm-color);
+}
+
+.weather-hot {
+  background-color: var(--hot-color);
+}
+
+/* Wardrobe styles */
+.wardrobe-container h2 {
+  margin-bottom: 20px;
+  color: var(--primary-color);
+}
+
+/* Clothing form styles */
+.clothing-form-container {
+  background-color: white;
+  border-radius: 8px;
+  padding: 20px;
+  margin-bottom: 30px;
+  box-shadow: var(--card-shadow);
+}
+
+.clothing-form-container h3 {
+  margin-bottom: 15px;
+  color: var(--primary-color);
+}
+
+.clothing-form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: 500;
+}
+
+.form-group input[type="text"],
+.form-group select {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid var(--border-color);
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+.checkbox-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.checkbox-group label {
+  display: flex;
+  align-items: center;
+  font-weight: normal;
+}
+
+.checkbox-group input[type="checkbox"] {
+  margin-right: 8px;
+}
+
+.clothing-form button {
+  grid-column: span 2;
+  padding: 12px 20px;
+  background-color: var(--primary-color);
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.clothing-form button:hover {
+  background-color: var(--secondary-color);
+}
+
+.clothing-form button:disabled {
+  background-color: var(--border-color);
+  cursor: not-allowed;
+}
+
+/* Clothing list styles */
+.clothing-list-container {
+  background-color: white;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: var(--card-shadow);
+}
+
+.clothing-filter {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.clothing-filter button {
+  padding: 8px 15px;
+  background-color: #f0f0f0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.clothing-filter button:hover {
+  background-color: #e0e0e0;
+}
+
+.clothing-filter button.active {
+  background-color: var(--primary-color);
+  color: white;
+}
+
+.empty-wardrobe {
+  text-align: center;
+  padding: 30px;
+  color: var(--light-text);
+}
+
+.clothing-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.clothing-card {
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  overflow: hidden;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.clothing-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.clothing-image {
+  height: 150px;
+  background-color: #f0f0f0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.clothing-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.placeholder {
+  background-color: var(--primary-color);
+  color: white;
+}
+
+.placeholder-text {
+  font-size: 48px;
+  font-weight: bold;
+}
+
+.clothing-details {
+  padding: 15px;
+}
+
+.clothing-details h4 {
+  margin-bottom: 10px;
+  color: var(--primary-color);
+}
+
+.clothing-details p {
+  margin-bottom: 5px;
+  font-size: 14px;
+}
+
+.rain-suitable {
+  color: var(--secondary-color);
+  font-weight: bold;
+}
+
+.delete-button {
+  width: 100%;
+  padding: 8px;
+  background-color: #f44336;
+  color: white;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.delete-button:hover {
+  background-color: #d32f2f;
+}
+
+/* Recommendation styles */
+.recommendation-container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.recommendation-box {
+  background-color: white;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: var(--card-shadow);
+}
+
+.recommendation-box h2 {
+  margin-bottom: 20px;
+  color: var(--primary-color);
+  text-align: center;
+}
+
+.outfit-recommendation {
+  margin-bottom: 30px;
+}
+
+.weather-summary {
+  background-color: #f0f0f0;
+  padding: 10px 15px;
+  border-radius: 4px;
+  margin-bottom: 15px;
+}
+
+.outfit-details {
+  padding: 15px;
+  border: 1px solid var(--border-color);
+  border-radius: 4px;
+}
+
+.outfit-details h3 {
+  margin-bottom: 10px;
+  color: var(--primary-color);
+}
+
+.outfit-text {
+  white-space: pre-line;
+  line-height: 1.6;
+}
+
+.no-recommendation {
+  text-align: center;
+  padding: 20px;
+  color: var(--light-text);
+  margin-bottom: 30px;
+}
+
+.available-clothing h3 {
+  margin-bottom: 15px;
+  color: var(--primary-color);
+}
+
+.clothing-categories {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+}
+
+.category {
+  padding: 15px;
+  border: 1px solid var(--border-color);
+  border-radius: 4px;
+}
+
+.category h4 {
+  margin-bottom: 10px;
+  color: var(--secondary-color);
+}
+
+.category ul {
+  list-style-position: inside;
+}
+
+.category li {
+  margin-bottom: 5px;
+  font-size: 14px;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .menu-icon {
+    display: flex;
+  }
+  
+  .nav-menu {
+    position: fixed;
+    top: 70px;
+    right: -100%;
+    width: 250px;
+    height: calc(100vh - 70px);
+    background-color: white;
+    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.1);
+    transition: right 0.3s ease;
+    z-index: 100;
+  }
+  
+  .nav-menu.open {
+    right: 0;
+  }
+  
+  .nav-menu ul {
+    flex-direction: column;
+    padding: 20px;
+  }
+  
+  .nav-menu li {
+    margin: 0;
+    padding: 15px 0;
+    border-bottom: 1px solid var(--border-color);
+  }
+  
+  .clothing-form {
+    grid-template-columns: 1fr;
+  }
+  
+  .clothing-form button {
+    grid-column: 1;
+  }
+  
+  .weather-info {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .weather-details {
+    margin-left: 0;
+    margin-top: 15px;
+  }
+}
