@@ -78,9 +78,9 @@ CREATE TABLE IF NOT EXISTS `CSC_4710_Project`.`Fashion_Trend` (
   `Designer_Name_Primary` VARCHAR(45) NOT NULL DEFAULT 'Generic',
   `Designer_Name_Secondary` VARCHAR(45) NULL,
   `Designer_Name_Tertiary` VARCHAR(45) NULL,
-  `Colar_Primary` VARCHAR(45) NOT NULL DEFAULT 'Generic',
-  `Colar_Secondary` VARCHAR(45) NULL,
-  `Colar_Tertiary` VARCHAR(45) NULL,
+  `color_Primary` VARCHAR(45) NOT NULL DEFAULT 'Generic',
+  `color_Secondary` VARCHAR(45) NULL,
+  `color_Tertiary` VARCHAR(45) NULL,
   PRIMARY KEY (`idFashion Trend`))
 ENGINE = InnoDB;
 

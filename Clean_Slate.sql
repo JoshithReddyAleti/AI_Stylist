@@ -1,23 +1,31 @@
--- Disable foreign key checks temporarily
-SET FOREIGN_KEY_CHECKS = 0;
 
--- Get all table names and create DROP TABLE statements
-SET @schema = 'CSC_4710_Project';
-SET @tables = NULL;
+DELIMITER //
+CREATE PROCEDURE clean_slate()
+BEGIN
+	-- Disable foreign key checks temporarily
+	SET FOREIGN_KEY_CHECKS = 0;
 
--- Get all tables in the schema
-SELECT GROUP_CONCAT('`', table_name, '`') 
-INTO @tables 
-FROM information_schema.tables 
-WHERE table_schema = @schema;
+	-- Get all table names and create DROP TABLE statements
+	SET @schema = 'CSC_4710_Project';
+	SET @tables = NULL;
 
--- Prepare the dynamic SQL statement to drop all tables
-SET @drop_tables = CONCAT('DROP TABLE IF EXISTS ', @tables);
+	-- Get all tables in the schema
+	SELECT GROUP_CONCAT('`', table_name, '`') 
+	INTO @tables 
+	FROM information_schema.tables 
+	WHERE table_schema = @schema;
 
--- Execute the statement if tables exist
-PREPARE stmt FROM @drop_tables;
-EXECUTE stmt;
-DEALLOCATE PREPARE stmt;
+	-- Prepare the dynamic SQL statement to drop all tables
+	SET @drop_tables = CONCAT('DROP TABLE IF EXISTS ', @tables);
 
--- Re-enable foreign key checks
-SET FOREIGN_KEY_CHECKS = 1;
+	-- Execute the statement if tables exist
+	PREPARE stmt FROM @drop_tables;
+	EXECUTE stmt;
+	DEALLOCATE PREPARE stmt;
+
+	-- Re-enable foreign key checks
+	SET FOREIGN_KEY_CHECKS = 1;
+    
+END // 
+DELIMITER ;
+CALL clean_slate();
