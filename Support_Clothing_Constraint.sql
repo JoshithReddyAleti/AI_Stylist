@@ -1,8 +1,7 @@
--- DESCRIBE Clothing_Item;
 
--- ALTER TABLE CSC_4710_Project.Clothing_Item
--- ADD CONSTRAINT Supported_Clothing_Type
--- CHECK (Type_Of IN ('IsTop', 'IsBottom', 'IsDress', 'IsCoat', 'IsHeadwear'));
+ALTER TABLE CSC_4710_Project.Clothing_Item
+ADD CONSTRAINT Supported_Clothing_Type 
+CHECK (Type_Of IN ('IsTop', 'IsBottom', 'IsDress', 'IsCoat', 'IsHeadwear', 'IsFootWear'));
 
 SHOW CREATE TABLE Clothing_Item;
 SELECT VERSION();
