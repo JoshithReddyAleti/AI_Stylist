@@ -9,7 +9,7 @@ WHERE table_schema = DATABASE()
 SET @query = IF(@constraint_exists = 0,
 "ALTER TABLE CSC_4710_Project.Clothing_Item
 ADD CONSTRAINT Supported_Clothing_Type 
-CHECK (Type_Of IN ('IsTop', 'IsBottom', 'IsDress', 'IsCoat', 'IsHeadwear', 'IsFootWear')",
+CHECK (Type_Of IN ('IsTop', 'IsBottom', 'IsDress', 'IsCoat', 'IsHeadwear', 'IsFootWear', 'IsOther'))",
 'SELECT "Constraint already exists"');
 
 
