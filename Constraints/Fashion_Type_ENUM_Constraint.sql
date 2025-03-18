@@ -37,6 +37,26 @@ MODIFY COLUMN `StylePerference` ENUM(
     'Grunge'
 );
 
+
+-- Event Table
+ALTER TABLE `Event`
+MODIFY COLUMN `DressCode` ENUM(
+    'Casual', 
+    'Formal', 
+    'Streetwear', 
+    'Bohemian', 
+    'Business',
+    'Vintage', 
+    'Athleisure', 
+    'Punk', 
+    'Gothic', 
+    'Preppy',
+    'Minimalist', 
+    'Avant-Garde', 
+    'Chic', 
+    'Grunge'
+);
+
 -- Clothing_Item Table
 ALTER TABLE `Clothing_Item`
 MODIFY COLUMN `Category` ENUM(
