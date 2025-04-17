@@ -1,0 +1,292 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom styles */
+@layer base {
+  body {
+    @apply antialiased font-inter text-navy-800 dark:text-navy-100 transition-colors duration-300;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-playfair;
+  }
+
+  /* Improved focus styles for accessibility */
+  :focus-visible {
+    @apply outline-none ring-2 ring-primary-500 ring-offset-2 dark:ring-offset-navy-900 rounded-sm;
+  }
+
+  /* Smooth scrolling */
+  html {
+    scroll-behavior: smooth;
+  }
+
+  /* Hide scrollbar but keep functionality */
+  .hide-scrollbar {
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
+  }
+  
+  .hide-scrollbar::-webkit-scrollbar {
+    display: none; /* Chrome, Safari, Opera */
+  }
+
+  /* Selection styling */
+  ::selection {
+    @apply bg-primary-500/30 text-navy-900 dark:text-white;
+  }
+}
+
+@layer components {
+  /* Glass effect variations */
+  .glass-effect {
+    @apply bg-white/70 backdrop-blur-md dark:bg-navy-800/70 shadow-lg border border-white/20 dark:border-navy-700/30;
+  }
+  
+  .glass-effect-dark {
+    @apply bg-navy-900/70 backdrop-blur-md text-white shadow-lg border border-navy-800/30;
+  }
+
+  .glass-effect-primary {
+    @apply bg-primary-500/10 backdrop-blur-md border border-primary-500/20 shadow-lg;
+  }
+  
+  /* Card styles */
+  .card {
+    @apply bg-white dark:bg-navy-800 rounded-xl shadow-md overflow-hidden transition-all duration-300;
+  }
+  
+  .card-hover {
+    @apply hover:shadow-xl transform hover:-translate-y-1 transition-all duration-300;
+  }
+
+  .card-active {
+    @apply ring-2 ring-primary-500 dark:ring-primary-400;
+  }
+  
+  /* Button styles */
+  .btn-primary {
+    @apply px-4 py-2 bg-primary-600 text-white rounded-md hover:bg-primary-700 active:bg-primary-800 transition-colors font-medium font-montserrat shadow-md shadow-primary-600/20 hover:shadow-lg hover:shadow-primary-600/30 focus:outline-none focus:ring-2 focus:ring-primary-500 focus:ring-offset-2 dark:focus:ring-offset-navy-900;
+  }
+  
+  .btn-secondary {
+    @apply px-4 py-2 bg-white dark:bg-navy-700 border border-navy-200 dark:border-navy-600 text-navy-800 dark:text-navy-100 rounded-md hover:bg-navy-50 dark:hover:bg-navy-600 transition-colors font-medium font-montserrat shadow-sm hover:shadow focus:outline-none focus:ring-2 focus:ring-navy-500 focus:ring-offset-2 dark:focus:ring-offset-navy-900;
+  }
+
+  .btn-outline {
+    @apply px-4 py-2 bg-transparent border border-primary-500 text-primary-600 dark:text-primary-400 rounded-md hover:bg-primary-50 dark:hover:bg-primary-900/20 transition-colors font-medium font-montserrat;
+  }
+
+  .btn-ghost {
+    @apply px-4 py-2 bg-transparent text-navy-700 dark:text-navy-200 rounded-md hover:bg-navy-100 dark:hover:bg-navy-700/50 transition-colors font-medium font-montserrat;
+  }
+
+  /* Badge styles */
+  .badge {
+    @apply inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium;
+  }
+
+  .badge-primary {
+    @apply bg-primary-100 text-primary-800 dark:bg-primary-900/30 dark:text-primary-300;
+  }
+
+  .badge-secondary {
+    @apply bg-navy-100 text-navy-800 dark:bg-navy-700 dark:text-navy-300;
+  }
+
+  .badge-success {
+    @apply bg-green-100 text-green-800 dark:bg-green-900/30 dark:text-green-300;
+  }
+
+  .badge-danger {
+    @apply bg-red-100 text-red-800 dark:bg-red-900/30 dark:text-red-300;
+  }
+
+  /* Input styles */
+  .input {
+    @apply w-full px-3 py-2 border border-navy-300 dark:border-navy-600 rounded-md focus:outline-none focus:ring-2 focus:ring-primary-500 dark:bg-navy-700 dark:text-white transition-colors duration-200;
+  }
+
+  /* Divider with text */
+  .divider {
+    @apply flex items-center text-navy-500 dark:text-navy-400 my-4;
+  }
+
+  .divider::before,
+  .divider::after {
+    @apply flex-1 border-t border-navy-200 dark:border-navy-700;
+    content: '';
+  }
+
+  .divider::before {
+    @apply mr-3;
+  }
+
+  .divider::after {
+    @apply ml-3;
+  }
+}
+
+/* React Calendar custom styles */
+.react-calendar {
+  @apply w-full border-0 font-inter bg-transparent;
+}
+
+.react-calendar__navigation {
+  @apply mb-4;
+}
+
+.react-calendar__navigation button {
+  @apply text-navy-800 dark:text-navy-100 font-montserrat;
+}
+
+.react-calendar__month-view__weekdays {
+  @apply text-navy-500 dark:text-navy-300 font-montserrat text-xs uppercase;
+}
+
+.react-calendar__month-view__days__day {
+  @apply rounded-full text-navy-800 dark:text-navy-100;
+}
+
+.react-calendar__tile--now {
+  @apply bg-primary-100 dark:bg-primary-900/30 text-primary-800 dark:text-primary-200 rounded-full;
+}
+
+.react-calendar__tile--active {
+  @apply bg-primary-600 text-white rounded-full;
+}
+
+/* Masonry grid styles */
+.my-masonry-grid {
+  display: flex;
+  width: auto;
+  margin-left: -16px; /* gutter size offset */
+}
+
+.my-masonry-grid_column {
+  padding-left: 16px; /* gutter size */
+  background-clip: padding-box;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes fadeOut {
+  from { opacity: 1; }
+  to { opacity: 0; }
+}
+
+@keyframes slideUp {
+  from { transform: translateY(20px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+@keyframes slideDown {
+  from { transform: translateY(-20px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+@keyframes slideLeft {
+  from { transform: translateX(20px); opacity: 0; }
+  to { transform: translateX(0); opacity: 1; }
+}
+
+@keyframes slideRight {
+  from { transform: translateX(-20px); opacity: 0; }
+  to { transform: translateX(0); opacity: 1; }
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.5; }
+}
+
+@keyframes bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+@keyframes shimmer {
+  0% { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
+
+/* Animation utility classes */
+.animate-fade-in {
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+.animate-fade-out {
+  animation: fadeOut 0.5s ease-in-out;
+}
+
+.animate-slide-up {
+  animation: slideUp 0.5s ease-out;
+}
+
+.animate-slide-down {
+  animation: slideDown 0.5s ease-out;
+}
+
+.animate-slide-left {
+  animation: slideLeft 0.5s ease-out;
+}
+
+.animate-slide-right {
+  animation: slideRight 0.5s ease-out;
+}
+
+.animate-pulse {
+  animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+.animate-bounce {
+  animation: bounce 1s ease infinite;
+}
+
+.animate-spin {
+  animation: spin 1s linear infinite;
+}
+
+/* Shimmer loading effect */
+.animate-shimmer {
+  background: linear-gradient(90deg, 
+    rgba(255, 255, 255, 0) 0%, 
+    rgba(255, 255, 255, 0.2) 50%, 
+    rgba(255, 255, 255, 0) 100%
+  );
+  background-size: 200% 100%;
+  animation: shimmer 1.5s infinite;
+}
+
+.dark .animate-shimmer {
+  background: linear-gradient(90deg, 
+    rgba(30, 41, 59, 0) 0%, 
+    rgba(30, 41, 59, 0.3) 50%, 
+    rgba(30, 41, 59, 0) 100%
+  );
+  background-size: 200% 100%;
+  animation: shimmer 1.5s infinite;
+}
+
+/* Animation delays */
+.delay-100 { animation-delay: 100ms; }
+.delay-200 { animation-delay: 200ms; }
+.delay-300 { animation-delay: 300ms; }
+.delay-400 { animation-delay: 400ms; }
+.delay-500 { animation-delay: 500ms; }
+
+/* Animation durations */
+.duration-300 { animation-duration: 300ms; }
+.duration-500 { animation-duration: 500ms; }
+.duration-700 { animation-duration: 700ms; }
+.duration-1000 { animation-duration: 1000ms; }
