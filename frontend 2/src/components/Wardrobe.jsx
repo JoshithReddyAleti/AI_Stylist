@@ -8,12 +8,12 @@ import { PlusIcon } from '@heroicons/react/24/outline';
 
 // Sample wardrobe data
 const initialItems = [
-  { id: '1', name: 'Blue Denim Jacket', category: 'Tops', tags: ['Casual', 'Denim'], imageUrl: 'https://via.placeholder.com/300?text=Jacket' },
-  { id: '2', name: 'Black Jeans', category: 'Bottoms', tags: ['Casual', 'Denim'], imageUrl: 'https://via.placeholder.com/300?text=Jeans' },
-  { id: '3', name: 'White Sneakers', category: 'Footwear', tags: ['Casual', 'Sports'], imageUrl: 'https://via.placeholder.com/300?text=Sneakers' },
-  { id: '4', name: 'Gold Watch', category: 'Accessories', tags: ['Formal', 'Luxury'], imageUrl: 'https://via.placeholder.com/300?text=Watch' },
-  { id: '5', name: 'Navy Blazer', category: 'Tops', tags: ['Formal', 'Business'], imageUrl: 'https://via.placeholder.com/300?text=Blazer' },
-  { id: '6', name: 'Floral Dress', category: 'Dresses', tags: ['Casual', 'Summer'], imageUrl: 'https://via.placeholder.com/300?text=Dress' },
+  { id: '1', name: 'Blue Denim Jacket', category: 'Tops', tags: ['Casual', 'Denim'], imageUrl: 'https://media.istockphoto.com/id/1352728757/photo/jean-jacket-isolated-on-white-front-and-back-views-ready-for-clipping-path.webp?a=1&b=1&s=612x612&w=0&k=20&c=anYUlUcgRt8jYnj9X_triCtyhQxd3E0PLT7XpZnN-nM=' },
+  { id: '2', name: 'Black Jeans', category: 'Bottoms', tags: ['Casual', 'Denim'], imageUrl: 'https://media.istockphoto.com/id/1084128060/photo/blank-black-mens-pants-mock-up-isolated.webp?a=1&b=1&s=612x612&w=0&k=20&c=axNi6qIV8d4FttruDE1LpQsxfBgfdQlZsZRDMhZ72Aw=' },
+  { id: '3', name: 'White Sneakers', category: 'Footwear', tags: ['Casual', 'Sports'], imageUrl: 'https://images.unsplash.com/photo-1597350584914-55bb62285896?w=700&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8V2hpdGUlMjBTbmVha2Vyc3xlbnwwfHwwfHx8MA%3D%3D' },
+  { id: '4', name: 'Gold Watch', category: 'Accessories', tags: ['Formal', 'Luxury'], imageUrl: 'https://images.unsplash.com/photo-1599143844475-a5a9549b28c1?w=700&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTZ8fEdvbGQlMjBXYXRjaHxlbnwwfHwwfHx8MA%3D%3D' },
+  { id: '5', name: 'Navy Blazer', category: 'Tops', tags: ['Formal', 'Business'], imageUrl: 'https://media.istockphoto.com/id/1347568249/photo/blank-blue-blazer-mockup-mens-grey-suit-front-view.webp?a=1&b=1&s=612x612&w=0&k=20&c=AQdtDufDrEJgHgjLsPoh7QoOnxAxWalrDBvf9qWK6h0=' },
+  { id: '6', name: 'Floral Dress', category: 'Dresses', tags: ['Casual', 'Summer'], imageUrl: 'https://sp.yimg.com/ib/th?id=OPHS.aCEQrsyYF7sL%2fg474C474&o=5&pid=21.1&w=160&h=105' },
 ];
 
 const categories = ['All', 'Tops', 'Bottoms', 'Dresses', 'Footwear', 'Accessories'];

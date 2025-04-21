@@ -1,6 +1,9 @@
 // File: /Users/harimanivannan/Documents/GitHub/ai-stylist/frontend/src/components/StyleQuiz/quizData.js
 
 // Quiz questions with options and style points
+// File: /workspaces/AI_Stylist/frontend/src/components/StyleQuiz/quizData.js
+
+// Quiz questions with options and style points
 export const quizQuestions = [
   {
     id: 'q1',
@@ -10,25 +13,25 @@ export const quizQuestions = [
       {
         id: 'q1a1',
         text: 'Neutrals & Earth Tones',
-        imageUrl: 'https://via.placeholder.com/300x300?text=Neutrals',
+        imageUrl: 'https://images.unsplash.com/photo-1653479679796-bdd06f177b13?w=700&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8TmV1dHJhbHMlMjAlMjYlMjBFYXJ0aCUyMFRvbmVzJTIwZHJlc3N8ZW58MHx8MHx8fDA%3D',
         stylePoints: { classic: 2, minimalist: 3, bohemian: 1 }
       },
       {
         id: 'q1a2',
         text: 'Bold & Vibrant Colors',
-        imageUrl: 'https://via.placeholder.com/300x300?text=Bold+Colors',
+        imageUrl: 'https://images.unsplash.com/photo-1503342217505-b0a15ec3261c?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80',
         stylePoints: { streetwear: 2, bohemian: 2, romantic: 1 }
       },
       {
         id: 'q1a3',
         text: 'Pastels & Soft Hues',
-        imageUrl: 'https://via.placeholder.com/300x300?text=Pastels',
+        imageUrl: 'https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?ixlib=rb-4.0.3&crop=entropy&cs=tinysrgb&w=300&h=300&fit=crop',
         stylePoints: { romantic: 3, preppy: 2, minimalist: 1 }
       },
       {
         id: 'q1a4',
         text: 'Monochrome (Black, White, Gray)',
-        imageUrl: 'https://via.placeholder.com/300x300?text=Monochrome',
+        imageUrl: 'https://images.unsplash.com/photo-1539008835657-9e8e9680c956?ixlib=rb-4.0.3&crop=entropy&cs=tinysrgb&w=300&h=300&fit=crop',
         stylePoints: { minimalist: 3, streetwear: 2, classic: 1 }
       }
     ]
@@ -95,25 +98,25 @@ export const quizQuestions = [
       {
         id: 'q4a1',
         text: 'Classic Icons (Audrey Hepburn, Cary Grant)',
-        imageUrl: 'https://via.placeholder.com/300x300?text=Classic+Icons',
+        imageUrl: 'https://images.unsplash.com/photo-1536922246289-88c42f957773?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80',
         stylePoints: { classic: 3, minimalist: 2, preppy: 1 }
       },
       {
         id: 'q4a2',
         text: 'Streetwear Influencers (Rihanna, A$AP Rocky)',
-        imageUrl: 'https://via.placeholder.com/300x300?text=Streetwear+Icons',
+        imageUrl: 'https://images.unsplash.com/photo-1545291730-faff8ca1d4b0?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80',
         stylePoints: { streetwear: 3, casual: 1, athleisure: 1 }
       },
       {
         id: 'q4a3',
         text: 'Bohemian Artists (Zoe Kravitz, Harry Styles)',
-        imageUrl: 'https://via.placeholder.com/300x300?text=Bohemian+Icons',
+        imageUrl:'https://plus.unsplash.com/premium_photo-1687294575545-44fcc8761b6b?w=700&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8aGFycnklMjBzdHlsZXN8ZW58MHx8MHx8fDA%3D',
         stylePoints: { bohemian: 3, romantic: 1, streetwear: 1 }
       },
       {
         id: 'q4a4',
         text: 'Minimalist Trendsetters (Kendall Jenner, Zendaya)',
-        imageUrl: 'https://via.placeholder.com/300x300?text=Minimalist+Icons',
+        imageUrl: 'https://images.unsplash.com/photo-1515377905703-c4788e51af15?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80',
         stylePoints: { minimalist: 3, classic: 1, streetwear: 1 }
       }
     ]
@@ -166,7 +169,7 @@ export const styleProfiles = {
       'George Clooney',
       'Kate Middleton'
     ],
-    imageUrl: 'https://via.placeholder.com/800x400?text=Classic+Style',
+    imageUrl: 'https://images.unsplash.com/photo-1534030347209-467a5b0ad3e6?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
     recommendations: [
       {
         category: 'Key Pieces',
@@ -199,7 +202,7 @@ export const styleProfiles = {
       'Emma Stone',
       'Mark Wahlberg'
     ],
-    imageUrl: 'https://via.placeholder.com/800x400?text=Casual+Style',
+    imageUrl: 'https://images.unsplash.com/photo-1501196354995-cbb51c65aaea?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
     recommendations: [
       {
         category: 'Key Pieces',
@@ -232,7 +235,7 @@ export const styleProfiles = {
       'Harry Styles',
       'Zoe Kravitz'
     ],
-    imageUrl: 'https://via.placeholder.com/800x400?text=Bohemian+Style',
+    imageUrl: 'https://images.unsplash.com/photo-1521336575822-6da63fb45455?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
     recommendations: [
       {
         category: 'Key Pieces',
@@ -265,7 +268,7 @@ export const styleProfiles = {
       'Ryan Gosling',
       'Tilda Swinton'
     ],
-    imageUrl: 'https://via.placeholder.com/800x400?text=Minimalist+Style',
+    imageUrl: 'https://images.unsplash.com/photo-1516762682406-975a3e1e05c4?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
     recommendations: [
       {
         category: 'Key Pieces',
@@ -298,7 +301,7 @@ export const styleProfiles = {
       'Billie Eilish',
       'Travis Scott'
     ],
-    imageUrl: 'https://via.placeholder.com/800x400?text=Streetwear+Style',
+    imageUrl: 'https://images.unsplash.com/photo-1534251679189-136e14e66a60?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
     recommendations: [
       {
         category: 'Key Pieces',
@@ -331,7 +334,7 @@ export const styleProfiles = {
       'Lily Collins',
       'Timothée Chalamet'
     ],
-    imageUrl: 'https://via.placeholder.com/800x400?text=Romantic+Style',
+    imageUrl: 'https://images.unsplash.com/photo-1519741497674-611481863552?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
     recommendations: [
       {
         category: 'Key Pieces',
@@ -364,7 +367,7 @@ export const styleProfiles = {
       'Hailey Bieber',
       'Michael B. Jordan'
     ],
-    imageUrl: 'https://via.placeholder.com/800x400?text=Athleisure+Style',
+    imageUrl: 'https://images.unsplash.com/photo-1551803091-77a6e18dbeb1?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
     recommendations: [
       {
         category: 'Key Pieces',
@@ -397,7 +400,7 @@ export const styleProfiles = {
       'Blake Lively',
       'Eddie Redmayne'
     ],
-    imageUrl: 'https://via.placeholder.com/800x400?text=Preppy+Style',
+    imageUrl: 'https://images.unsplash.com/photo-1531427186611-ecfd6d936c79?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
     recommendations: [
       {
         category: 'Key Pieces',

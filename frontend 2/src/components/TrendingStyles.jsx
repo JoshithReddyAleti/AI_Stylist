@@ -8,7 +8,7 @@ const trendingStyles = [
     name: 'Monochromatic Minimalism',
     description: 'Clean lines and single color palettes dominate this sleek trend',
     popularity: 92,
-    imageUrl: 'https://via.placeholder.com/300x200?text=Monochromatic',
+    imageUrl: 'https://images.unsplash.com/photo-1744389479988-c0b85772263c?w=700&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTV8fE1vbm9jaHJvbWF0aWMlMjBNaW5pbWFsaXNtJTIwZHJlc3MlMjBtZW58ZW58MHx8MHx8fDA%3D',
     tags: ['Minimalist', 'Modern', 'Office']
   },
   {
@@ -16,7 +16,7 @@ const trendingStyles = [
     name: 'Vintage Revival',
     description: '70s and 80s inspired looks with a modern twist',
     popularity: 87,
-    imageUrl: 'https://via.placeholder.com/300x200?text=Vintage',
+    imageUrl: 'https://media.istockphoto.com/id/1171322967/photo/portrait-of-handsome-gentleman-dressed-in-vintage-costume-holding-top-hat-in-stately-home.webp?a=1&b=1&s=612x612&w=0&k=20&c=tMnxBC74o3NPircSThh-fmO7lsW3a5Mh_ZCeUAIRcnI=',
     tags: ['Retro', 'Casual', 'Statement']
   },
   {
@@ -24,7 +24,7 @@ const trendingStyles = [
     name: 'Sustainable Chic',
     description: 'Eco-friendly fashion that doesn\'t compromise on style',
     popularity: 85,
-    imageUrl: 'https://via.placeholder.com/300x200?text=Sustainable',
+    imageUrl: 'https://plus.unsplash.com/premium_photo-1705170986282-7f10f6ec3989?w=700&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8U3VzdGFpbmFibGUlMjBDaGljJTIwZHJlc3MlMjBtZW58ZW58MHx8MHx8fDA%3D',
     tags: ['Eco-friendly', 'Casual', 'Versatile']
   }
 ];
